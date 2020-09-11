@@ -4,10 +4,10 @@
 #include <conio.h>
 int delay(int Sec)
 {
-	Sec = Sec*1000000;
-      clock_t Start = clock();
-      while (clock() < Start + Sec);
-      return 0;
+	Sec = Sec*1000;
+      	clock_t Start = clock();
+      	while (clock() < Start + Sec);
+      	return 0;
 }
 int main()
 {
@@ -16,7 +16,7 @@ int main()
 	scanf("%d",&Sec);
 	while(!kbhit())
 	{
-		Delay(Sec);
+		delay(Sec);
 		int k = rand()%100;
 		printf("random number %d was generated\n",k);
 	}
